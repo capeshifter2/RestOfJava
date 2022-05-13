@@ -18,8 +18,8 @@ public class Program {
 
         canvas.setColor(Color.red);
         MyFunction fSin =  (x)->{return (int)(200 * Math.sin(Math.PI*x/360));};
-        for (int x = -360; x < 360; x++) {
-            canvas.plot(x, fSin.calcY(x));
+        for (int x = -180; x < 360 + 180; x++) {
+            canvas.plot(x - 180, fSin.calcY(x));
         }
 
         // Pause and close the canvas then terminate the program.
