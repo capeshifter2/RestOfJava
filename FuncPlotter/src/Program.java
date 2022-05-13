@@ -15,7 +15,7 @@ public class Program {
         canvas.open();
 
         // Draw a short red diagonal on the canvas
-        canvas.pause();
+
         canvas.setColor(Color.red);
         MyFunction fSin =  (x)->{return (int)(200 * Math.sin(Math.PI*x/360));};
         for (int x = -360; x < 360; x++) {
