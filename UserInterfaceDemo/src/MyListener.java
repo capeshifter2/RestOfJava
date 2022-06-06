@@ -1,6 +1,6 @@
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
+import java.awt.*;
 public class MyListener implements WindowListener{
 
 	@Override
@@ -18,7 +18,7 @@ public class MyListener implements WindowListener{
 	@Override
 	public void windowClosing(WindowEvent arg0) {
 		System.out.println("Closing");
-		
+		((Frame)arg0.getSource()).dispose();
 	}
 
 	@Override
