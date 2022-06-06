@@ -29,6 +29,23 @@ public class Main {
 		}
 		System.out.println(wordMap.toString());
 		bookIn.close();
+		boolean stop = false;
+		while (!stop) {
+			System.out.print("Word: (q to quit) ");
+			String word = console.nextLine();
+			if (word.equals("q")) {
+				stop = true;
+			}
+			else {
+					System.out.println(word + " : " + wordMap.get(word));
+			}
+		}
+		for (String word : wordMap.keySet()) {
+			int value = wordMap.get(word);
+			if (value >= 500) {
+				System.out.println(word + ": " + value);
+			}
+		}
 	}
 	public static Scanner getBook(Scanner console) {
 		try {
@@ -36,7 +53,7 @@ public class Main {
 		File filepath = new File(console.nextLine());
 		Scanner s = new Scanner(filepath);
 		
-		console.close();
+
 		return s;
 		} catch (Exception e) {
 			System.out.println(e.getStackTrace());
@@ -46,14 +63,14 @@ public class Main {
 	}
 	public static String formatWord(String w) {
 		w = w.toLowerCase();
-		w.replace('\'', ' ');
-		w.replace(';', ' ');
-		w.replace('?', ' ');
-		w.replace('(', ' ');
-		w.replace(')', ' ');
-		w.replace('.', ' ');
-		w.replace(',', ' ');
-		w.replace('!' , ' ');
+		w = w.replace('\'', ' ');
+		w = w.replace(';', ' ');
+		w = w.replace('?', ' ');
+		w = w.replace('(', ' ');
+		w = w.replace(')', ' ');
+		w = w.replace('.', ' ');
+		w = w.replace(',', ' ');
+		w = w.replace('!' , ' ');
 		return w;
 	}
 
