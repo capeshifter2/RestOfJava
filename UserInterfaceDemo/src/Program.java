@@ -4,11 +4,11 @@ import java.awt.event.*;
 public class Program {
 	
 	private static final int padding = 20;
-	
+	private static Frame myFrame = new Frame("Demo Frame");
+	private static Button button = new Button("F!rst!!");
 	public static void main(String[] args) {
 		
 		System.out.println("Hello Java!");
-		Frame myFrame = new Frame("Demo Frame");
 		myFrame.setSize(800, 600);
 		myFrame.setVisible(true);
 		myFrame.addWindowListener(new MyListener());
@@ -16,7 +16,7 @@ public class Program {
 		
 		Insets insets = myFrame.getInsets();
 		
-		Button button = new Button("F!rst!!");
+		
 		button.setBounds(insets.left + padding, insets.top + padding, 80, 20);
 		myFrame.add(button);
 		button.setBackground(Color.blue);

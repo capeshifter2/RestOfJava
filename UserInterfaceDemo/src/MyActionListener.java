@@ -7,7 +7,8 @@ public class MyActionListener implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		System.out.println("ARISE, ROBOTS");
 		Button source = (Button) arg0.getSource();
-		System.out.println(source.getName());
+		Frame myFrame = (Frame) source.getParent();
+		
 	}
 
 }
